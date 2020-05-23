@@ -1,0 +1,40 @@
+{% extends 'team/main.html' %} {% load static %} {% block content %}
+<div>
+  <h1>Stats of {{player.firstName}} {{player.lastName}}:</h1>
+  <table class="table table-light table-bordered table-striped">
+    <tbody>
+      <tr>
+        <th>Country</th>
+        <td>{{player.country}}</td>
+      </tr>
+      <tr>
+        <th>Matches Played</th>
+        <td>{{playerHistory.matches}}</td>
+      </tr>
+      <tr>
+        <th>Runs Scored</th>
+        <td>{{playerHistory.runs}}</td>
+      </tr>
+      <tr>
+        <th>Highest Scored</th>
+        <td>{{playerHistory.highestScore}}</td>
+      </tr>
+      <tr>
+        <th>Scored Fifties</th>
+        <td>{{playerHistory.fifties}}</td>
+      </tr>
+      <tr>
+        <th>Scored Hundreds</th>
+        <td>{{playerHistory.hundreds}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-right">
+    <a
+      class="btn btn-warning"
+      href="{% url 'playerHistory_edit' player.firstName %}"
+      >Edit</a
+    >
+  </div>
+</div>
+{% endblock content %}

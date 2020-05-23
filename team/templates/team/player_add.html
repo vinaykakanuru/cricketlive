@@ -1,0 +1,15 @@
+{% extends 'team/main.html' %} {% load static %} {% block content %}
+<p>
+  Please add a Player to {{team.name}} Team
+</p>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table class="table table-bordered">
+    {{player_form.as_table}}
+  </table>
+  <br />
+  <button type="submit" class="btn btn-success float-right">
+    Add Player
+  </button>
+</form>
+{% endblock content %}

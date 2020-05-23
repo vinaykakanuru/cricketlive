@@ -1,0 +1,15 @@
+{% extends 'team/main.html' %} {% load static %} {% block content %}
+<div class="row">
+  {% for team in teams %}
+  <div class="col-lg-4">
+    <a href="{% url 'players' team.name %}"
+      ><img class="thumbnail" src="{{team.logoURL}}"
+    /></a>
+    <div class="box-element">
+      <h6><strong>{{team.name}}</strong></h6>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}

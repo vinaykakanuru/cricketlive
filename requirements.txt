@@ -1,0 +1,11 @@
+Django==3.0.6
+django-storages==1.9.1
+boto3==1.13.9
+botocore==1.16.9
+gunicorn==20.0.4
+Pillow==7.1.2
+psycopg2==2.8.4
+python-dateutil==2.8.1
+pytz==2019.3
+six==1.14.0
+whitenoise==5.0.1

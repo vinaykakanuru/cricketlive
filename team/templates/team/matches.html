@@ -1,0 +1,21 @@
+{% extends 'team/main.html' %} {% load static %} {% block content %}
+<div class="container">
+  <form action="{% url 'matches_add' %}" method="POST">
+    {% csrf_token %}
+    <table class="table table-light table-bordered table-striped">
+      {% for match in matches %}
+      <tbody>
+        <tr>
+          <th>Matches</th>
+          <td>{{match.team1}} X {{match.team2}}</td>
+          <td>{{match.winner}}</td>
+        </tr>
+      </tbody>
+      {% endfor %}
+    </table>
+    <button type="submit" class="btn btn-warning float-right">
+      Add Match
+    </button>
+  </form>
+</div>
+{% endblock content %}

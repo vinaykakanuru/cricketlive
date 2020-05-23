@@ -1,0 +1,15 @@
+{% extends 'team/main.html' %} {% load static %} {% block content %}
+<p>
+  NO Stats found. Please add the Stats for {{player.firstName}} {{player.lastName}}
+</p>
+<form method="POST">
+  {% csrf_token %}
+  <table class="table table-bordered">
+    {{playerhistory_form.as_table}}
+  </table>
+  <br />
+  <button type="submit" class="btn btn-success float-right">
+    Add Player Stats
+  </button>
+</form>
+{% endblock content %}

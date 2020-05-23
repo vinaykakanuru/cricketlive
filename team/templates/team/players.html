@@ -1,0 +1,27 @@
+{% extends 'team/main.html' %} {% load static %} {% block content %}
+<div class="container">
+  <h1>Players in {{team.name}}</h1>
+  <a
+    href="{% url 'player_add' team.name %}"
+    class="btn btn-success"
+    style="float: right;"
+    >Add Player</a
+  >
+  <div class="row">
+    {%for player in team.players%}
+    <div class="col-lg-3">
+      <a href="{% url 'playerHistory_details' player.firstName %}">
+        <img class="thumbnail" src="{{player.imageURL}}" alt="Pic Not Found" />
+      </a>
+      <div class="box-element">
+        <a href="{% url 'player_edit' player.firstName %}"
+          ><h6><strong>{{player.firstName}} {{player.lastName}}</strong></h6></a
+        >
+      </div>
+    </div>
+    {%empty%}
+    <h3>No Player Found</h3>
+    {%endfor%}
+  </div>
+</div>
+{% endblock content %}

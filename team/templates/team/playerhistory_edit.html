@@ -1,0 +1,16 @@
+{% extends 'team/main.html' %} {% load static %} {% block content %}
+<br />
+<p>
+  Update {{player.firstName}} {{player.lastName}} Stats
+</p>
+<form method="POST">
+  {% csrf_token %}
+  <table class="table table-bordered table-light">
+    {{playerhistory_form.as_table}}
+  </table>
+  <br />
+  <button type="submit" class="btn btn-warning float-right">
+    Update Player Stats
+  </button>
+</form>
+{% endblock content %}

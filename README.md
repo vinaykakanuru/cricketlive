@@ -1,8 +1,13 @@
 # Django simple CrciketApp
-![Django 3.0.6](https://img.shields.io/badge/Django-3.0.6-brightgreen.svg)
 
-• This repository consists of __Cricket Web App__ buid with __Django__.
+![Django 3.1.6](https://img.shields.io/badge/Django-3.1.6-brightgreen.svg)
 
-• It will give you simple Knowledge on how to write __custom__ logic in your Django Projects.
+• This repository consists of **Cricket Web App** buid with **Django**.
+
+• It will give you simple Knowledge on how to write **custom** logic in your Django Projects.
+
+• It helps you in understading **_CRUD_** Operations and how can we host pour application to **_Heroku_**.
+
+• It helps you how we can handle the static content through **_AWS S3_**.
 
 • Please do ⭐ the repository, if it helped you in anyway.

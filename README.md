@@ -1,6 +1,6 @@
 # Django simple CrciketApp
 
-![Django 3.1.6](https://img.shields.io/badge/Django-3.1.6-brightgreen.svg)
+![Django 3.1.8](https://img.shields.io/badge/Django-3.1.8-brightgreen.svg)
 
 • This repository consists of **Cricket Web App** buid with **Django**.
 
